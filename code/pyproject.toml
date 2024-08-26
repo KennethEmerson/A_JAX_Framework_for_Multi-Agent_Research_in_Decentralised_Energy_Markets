@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "JAX Framework for Multi-Agent Research in Decentralised Energy Markets"
+version = "1.0.0"
+description = "A Google Jax framework for researching the interaction between independent prosumer actors in a local energy market"
+authors = ["K. emerson"]
+repository = "https://github.com/KennethEmerson/Thesis_MARL_in_Decentralised_Energy_Networks"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jax = {extras = ["cpu"], version = "^0.4.23"}
+matplotlib = "^3.8.2"
+chex = "^0.1.85"
+flax = {extras = ["all"], version = "^0.7.5"}
+distrax = "^0.1.5"
+wandb = "^0.16.3"
+pandas = "^2.2.1"
+bitarray = "^2.9.2"
+lxml = "^5.2.1"
+pvlib = "^0.10.4"
+entsoe-py = "^0.6.7"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.3.2"
+ruff = "^0.1.6"
+ipykernel = "^6.29.4"
+
+[build-system]
+requires = ["poetry-core>=1.7.1"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+line-length = 88
+indent-width = 4
+extend-include = ["*.ipynb"]
+# E an F errors are always included: check https://docs.astral.sh/ruff/rules/#mccabe-c90
+# I: Isort, N: PEP naming, S: bandit security, D: pydocstyle
+extend-select = [
+    "I","N","ANN","ASYNC","S",
+    "D100","D101","D102", "D103", "D104", "D419","D417"
+    ]
+# ignore missing-type-self (ANN101)
+# ignore uppercase in function names (N802) and variable names (N803)
+extend-ignore = ["ANN101","N802","N803"]
+
+[tool.ruff.lint.isort]
+known-third-party = ["jax","flax","optax","chex","wandb","pandas","numpy","pvlib","entsoe"]

@@ -1,0 +1,23 @@
+# GENERAL 
+.vscode/
+.DS_Store
+Thumbs.db
+
+# PYTHON
+*.py[cod]
+.mypy_cache/
+.pytest_cache/
+.coverage
+coverage.json
+htmlcov/
+.ruff_cache
+__pycache__
+
+/code/wandb
+/code/saved_model
+/code/experiment_log
+/code/experiment_logs_thesis
+/code/notebooks/synthetic_data_plots
+/code/notebooks/reward_plots
+/code/notebooks/experiment_plots
+/code/notebooks/showcase_framework_plots

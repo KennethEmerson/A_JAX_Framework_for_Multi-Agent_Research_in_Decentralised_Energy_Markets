@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "antgen"
+version = "0.4.1"
+authors = [
+  { name="Nuno Velosa", email="nunovelosa@hotmail.com" },
+]
+description = "This tool generates synthetic macroscopic load signatures for their use in conjunction with NILM (load disaggregation) tools."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/nunovelosa/antgen"
+"Bug Tracker" = "https://gitlab.com/nunovelosa/antgen/issues"

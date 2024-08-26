@@ -1,0 +1,38 @@
+{
+    "name": "Python",
+    "build": {
+      "dockerfile": "../Dockerfile",
+      "context":"..",
+      "target": "development"
+    },
+    //"runArgs": ["--name", "python_devcontainer"],
+    "runArgs":["--rm"],
+    "mounts": [
+      "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+  
+    
+    "customizations": {
+        "vscode": {
+
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "njpwerner.autodocstring",
+                "mhutchie.git-graph",
+                "ms-toolsai.jupyter"
+            ],
+            "settings": { 
+                
+                "[python]": {
+                    "defaultInterpreterPath": "/usr/local/bin/python",
+                        
+                    "linting.ruffenabled":"true",
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.tabSize": 4
+                }          
+            }
+        }
+      
+    }
+}

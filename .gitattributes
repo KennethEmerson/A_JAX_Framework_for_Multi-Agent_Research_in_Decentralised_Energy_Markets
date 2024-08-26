@@ -1,0 +1,6 @@
+# K.E. added on 01MAR2023
+# file required to exclude line ending differences between Linux and Windows as a change in the file
+# is required when using devcontainers.
+* text=auto eol=lf
+* .{cmd,[cC][mM][dD]} text eol=crlf
+* .{bat,[bB][aA][tT]} text eol=crlf
