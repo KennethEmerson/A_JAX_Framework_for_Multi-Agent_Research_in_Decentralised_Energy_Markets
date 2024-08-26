@@ -17,8 +17,9 @@ The framework is implemented in Python and [JAX](https://github.com/google/jax) 
 [Working Principles](#Working-Principles)  
 [Implementation and Folder Structure](#Implementation-and-Folder-Structure)    
 [How To Use The Framework](#How-To-Use-The-Framework)  
-[Auxiliary Scripts and Notebooks](#Auxiliary-Scripts-and-Notebooks)
+[Generating Synthetic Actor Energy Consumption DataSets](#Generating-Synthetic-Actor-Energy-Consumption-DataSets)  
 [References](#References)
+
 ## Prerequisites:
 The codebase uses [Poetry](https://python-poetry.org/) v1.7.1 as a dependency management tool and is therefore required to install all dependencies before using the framework.
 With Poetry, the dependencies, used by the framework, can be installed by using the following command from within the *src/code* folder:
